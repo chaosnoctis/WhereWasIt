@@ -1,12 +1,8 @@
+#!/usr/bin/env python 
+
 import os
 import pathlib
 import re
-# TEST SEARCH
-
-# TODO - Search and navigate to desired search directory -- check
-
-# TODO - Confirm that the user's input and actual directory search match
-# -- check
 
 def find_directory():
     print('This is your current directory: ', os.getcwd())
@@ -25,11 +21,8 @@ def find_directory():
     return os.getcwd()
 
 
-# TODO - Create a function that searches one specific or general item
 def search_specific_file(pattern=None):
     # Obtain a list of the files in the current working directory and print them on the screen
-    # TODO-LATER: Make it so you can change the directory prior to searching
-    # within files
     print('These are your files in this directory:\n')
     flist = [x for x in pathlib.Path().iterdir() if x.is_file()]
     for i in flist:
@@ -75,12 +68,6 @@ def search_all_files(pattern=None):
                 print(num, i, 'The string is in this file!')
             else:
                 print(num, i, 'Pattern was not found')
-
-
-# TODO - Encorporate last function for multiple items (i.e loop)
-
-
-# TODO - Make the program available to use on Unix or Windows platforms
 
 # find_directory()
 #search_specific_file(input("What's the pattern"))
